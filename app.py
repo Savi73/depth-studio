@@ -1,6 +1,7 @@
 import base64
 import json
 import logging
+import os
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from io import BytesIO
 from pathlib import Path
@@ -10,8 +11,8 @@ from PIL import Image, UnidentifiedImageError
 
 from infer import estimate_depth
 
-HOST = "127.0.0.1"
-PORT = 8000
+HOST = "0.0.0.0"
+PORT = int(os.environ.get("PORT", "8000"))
 MAX_UPLOAD_BYTES = 20 * 1024 * 1024
 INDEX_FILE = Path(__file__).with_name("index.html")
 
