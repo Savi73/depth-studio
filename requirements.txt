@@ -1,0 +1,6 @@
+accelerate
+opencv-python
+Pillow
+requests
+torch
+transformers

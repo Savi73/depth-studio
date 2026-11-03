@@ -1,0 +1,12 @@
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Generated depth-map outputs
+depth_map_grayscale.png
+depth_map_colored.png
+
+# Local environment and editor files
+.env
+.vscode/
